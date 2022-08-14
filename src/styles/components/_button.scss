@@ -1,0 +1,33 @@
+.btn {
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &_main {
+    padding: 16px 41px;
+    border-radius: 50px;
+    font-family: "Panton Heavy";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.3;
+    color: white;
+    background: linear-gradient(180deg, var(--main-primary) 0%, var(--main-secondary) 100%);
+    box-shadow: 2px 4px 6px rgba(122, 94, 62, 0.6);
+    transition: --main-primary .2s linear, --main-secondary .2s linear;
+ 
+    &:hover {
+      --main-primary: #ff9900;
+    }
+  }
+}
+
+@property --main-primary {
+  syntax: '<color>';
+  initial-value: #ffd600;
+  inherits: false;
+}
+
+@property --main-secondary {
+  syntax: '<color>';
+  initial-value: #ff6b00;
+  inherits: false;
+}
