@@ -1,0 +1,105 @@
+.truncate {
+    max-width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container {
+    width: 100%;
+    max-width: 1084px;
+}
+
+.section-gradient {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(40%);
+
+    width: 100%;
+    height: 498px;
+    background: linear-gradient(360deg, #2D2E42 39.96%, rgba(45, 46, 66, 0) 100%);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
+    &_2 {
+        -webkit-line-clamp: 2;
+    }
+
+    &_3 {
+        -webkit-line-clamp: 3;
+    }
+
+    &_4 {
+        -webkit-line-clamp: 4;
+    }
+
+    &_5 {
+        -webkit-line-clamp: 5;
+    }
+
+    &_6 {
+        -webkit-line-clamp: 6;
+    }
+}
+
+.split {
+    position: relative;
+    width: 90%;
+    height: 4px;
+    margin: 0 auto;
+    // background: #31c3ac;
+    background: linear-gradient(
+      90deg,
+      #35d4c0 0%,
+      rgba(37, 241, 180, 0.38) 100%
+    );
+
+    margin-bottom: 70px;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+    }
+
+    &::before {
+      left: 0;
+      background: #31c3ac;
+    }
+
+    &::after {
+      background: rgb(21, 146, 108);
+      right: 0;
+    }
+}
+
+.divider {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 30px;
+    background: url('../images/divider.png');
+    background-position: center;
+
+    &__stone {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+}

@@ -1,0 +1,52 @@
+.hero {
+    width: 100%;
+    height: 800px;
+    background: url('../images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+
+    &__inner {
+        margin: 0 auto;
+        padding-top: 215px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+    }
+
+    &__text {
+        font-weight: 900;
+
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        font-family: "Panton Heavy";
+
+        text-shadow: 1px 2px 0px #FFAC00;
+    }
+
+    &__heading {
+        font-size: 80px;
+        line-height: 72px;
+    }
+
+    &__hashtag {
+        font-size: 56px;
+        line-height: 71px;
+
+        margin: 25px 0 44px;
+    }
+
+    &__btn {
+        min-width: 230px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0%;
+    }
+}

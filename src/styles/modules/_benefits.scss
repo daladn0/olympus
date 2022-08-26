@@ -1,0 +1,130 @@
+.benefits {
+  position: relative;
+  background: var(--primary-color);
+  overflow: hidden;
+
+  &__inner {
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+  // top
+
+  &__top {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+  }
+
+  &__text {
+    max-width: 492px;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+    color: #ffffff;
+  }
+
+  &__subheading {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ffffff;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-15%);
+  }
+
+  &__thunder {
+    position: absolute;
+    left: 0;
+    bottom: -14%;
+  }
+
+  // bottom
+
+  &__bottom {
+    position: relative;
+    height: 750px;
+    .benefits__inner {
+      padding: 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    &-bg {
+      pointer-events: none;
+      position: absolute;
+      bottom: 0;
+      left: 0%;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 20px;
+  }
+
+  &__item {
+    &-heading {
+      display: flex;
+      align-items: center;
+
+      font-size: 24px;
+      line-height: 48px;
+      color: #ffffff;
+    }
+
+    &-text {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+
+      color: #ffffff;
+    }
+  }
+
+  &__number {
+    display: block;
+    margin-right: 10px;
+    font-size: 30px;
+    line-height: 48px;
+    color: #35d4c0;
+  }
+
+  &__column {
+    position: absolute;
+    bottom: 0;
+
+    &_1 {
+        left: 0;
+        transform: translateX(-35%);
+    }
+
+    &_2 {
+        transform: translateX(35%);
+        right: 0;
+    }
+  }}

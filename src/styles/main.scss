@@ -2,8 +2,19 @@
 @import './fonts';
 @import './app';
 
+// utilities
+
+@import './utils';
+
 // modules
 @import './modules/header';
+@import './modules/hero';
+@import './modules/benefits';
+@import './modules/steps';
+@import './modules/enlist';
+@import './modules/media';
+@import './modules/questions';
+@import './modules/socials';
 
 // components
 @import './components/button'

@@ -1,0 +1,18 @@
+.media {
+    background: var(--secondary-color);
+    padding: 60px 0;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0 auto;
+        font-size: 30px;
+        line-height: 48px;
+        color: #FFFFFF;
+    }
+
+    &__btn {
+        min-width: 230px;
+    }
+}
