@@ -65,3 +65,58 @@
         margin: 10px auto;
     }
 }
+
+@include media('<=m-desktop') {
+    .steps {
+        height: fit-content;
+
+        &__info {
+            padding-bottom: 650px;
+        }
+
+        &__heading {
+            text-align: center;
+        }
+
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 540px;
+            order: 1;
+            position: absolute;
+            transform: translate(-50%, 40px);
+            bottom: 0;
+            top: unset;
+            left: 50%;
+        }
+
+        &__thunder {
+            display: none;
+        }
+
+        &__bg {
+            height: 100px;
+        }
+    }
+}
+
+@include media('<=tablet') {
+    .steps {
+        &__heading {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        &__items {
+            font-size: 16px;
+        }
+        
+        &__arrow {
+            width: 147px;
+        }
+    }
+}

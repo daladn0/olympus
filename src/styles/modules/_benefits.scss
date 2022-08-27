@@ -39,9 +39,9 @@
 
   &__img {
     position: absolute;
-    right: 0;
+    right: 50%;
     top: 0;
-    transform: translateY(-15%);
+    transform: translate(100%, -15%);
   }
 
   &__thunder {
@@ -83,6 +83,7 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     gap: 20px;
+    z-index: 2;
   }
 
   &__item {
@@ -116,7 +117,7 @@
 
   &__column {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
 
     &_1 {
         left: 0;
@@ -127,4 +128,126 @@
         transform: translateX(35%);
         right: 0;
     }
-  }}
+  }
+}
+
+@include media('<=w-desktop') {
+  .benefits {
+    &__bottom {
+      .benefits {
+        &__inner {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+      }
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+
+@include media('<=m-desktop') {
+  .benefits {
+    &__top {
+      .section-gradient {
+        z-index: 2;
+      }
+    }
+
+    &__column {
+      z-index: 3;
+    }
+
+    &__heading {
+      margin-bottom: 20px;
+    }
+
+    &__subheading {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__text {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__img {
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, 38%);
+      top: unset;
+      bottom: 0;
+      width: 450px;
+      z-index: 2;
+    }
+
+    &__thunder {
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+    }
+  }
+}
+
+@include media('<=desktop') {
+  .benefits {
+    &__bottom {
+      height: fit-content;
+      .benefits {
+        &__inner {
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-bottom: 70px;
+        }
+      }
+    }
+
+    &__text {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    &__heading {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    &__items {
+      grid-template-columns: 100%;
+    }
+
+    &__column {
+      display: none;
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .benefits {
+    &__title {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    &__img {
+      width: 400px;
+    }
+
+    &__number {
+      font-size: 20px;
+    }
+
+    &__item {
+      &-heading {
+        font-size: 16px;
+      }
+
+      &-text {
+        font-size: 12px;
+      }
+    }
+  }
+}

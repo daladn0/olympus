@@ -49,3 +49,40 @@
     color: #878492;
   }
 }
+
+@include media('<=tablet') {
+  .questions {
+    &__inner {
+      padding: 50px 0;
+    }
+
+    &__split {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  .socials {
+    &__items {
+      grid-template-columns: repeat(3, 47px);
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 1.2;
+      padding: 0 20px;
+    }
+
+    &__btn {
+      margin-bottom: 30px;
+    }
+
+    &__copyright {
+      font-size: 11px;
+    }
+  }
+}

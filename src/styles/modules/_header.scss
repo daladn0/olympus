@@ -1,99 +1,199 @@
 .header {
+  position: absolute;
+  top: 45px;
+  left: 66px;
+  width: calc(100% - 132px);
+  min-height: 50px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  border: 4px solid #fdf6d9;
+  z-index: 2;
+
+  &__corner {
     position: absolute;
-    top: 45px;
-    left: 66px;
-    width: calc(100% - 132px);
-    background: var(--primary-color);
-    border-radius: 50px;
-    border: 4px solid #FDF6D9;
-    z-index: 2;
+    height: calc(100% + 12px);
+    pointer-events: none;
+    top: 50%;
 
-    &__corner {
-        position: absolute;
-        height: calc(100% + 12px);
-        pointer-events: none;
-        top: 50%;
-
-        &_left {
-            left: 0;
-            transform: translate(-40%, -50%);
-        }
-
-        &_right {
-            right: 0;
-            transform: translate(40%, -50%) rotate(180deg);
-        }
+    &_left {
+      left: 0;
+      transform: translate(-40%, -50%);
     }
 
-    &__nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 212px 16px 150px;
+    &_right {
+      right: 0;
+      transform: translate(40%, -50%) rotate(180deg);
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 212px 16px 150px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    .header__item:first-child {
+      margin-right: 120px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    font-family: "Panton Heavy";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 0%;
+      height: 3px;
+      background: white;
+      border-radius: 50px;
+
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transition: all 0.1s ease;
     }
 
+    &:hover::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__link {
+    width: auto;
+    height: 90px;
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    &_mobile {
+      display: none;
+    }
+  }
+}
+
+@include media("<=w-desktop") {
+  .header {
     &__group {
-        display: flex;
-        align-items: center;
-
-        .header__item:first-child {
-            margin-right: 120px;
-        }
-    }
-
-    &__item {
-        position: relative;
-
-        font-family: 'Panton Heavy';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 14px;
-        line-height: 18px;
-
-        /* identical to box height */
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-
-        color: #FFFFFF;
-        cursor: pointer;
-
-        &::before {
-            content: "";
-
-            display: block;
-            width: 0%;
-            height: 3px;
-            background: white;
-            border-radius: 50px;
-
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            transition: all .1s ease;
-        }
-
-        &:hover::before {
-            width: 100%;
-            left: 0;
-        }
-    }
-
-    &__link {
-        width: auto;
-        height: 90px;
-        display: block;
-
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+      display: none;
     }
 
     &__btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
+      &_desktop {
+        display: none;
+      }
+
+      &_mobile {
+        display: block;
+
+        height: calc(50px - 8px);
+        line-height: 1;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          display: block;
+          width: 30px;
+          height: 3px;
+          background: white;
+          border-radius: 9999px;
+          transition: all 0.1s linear;
+
+          &:first-child {
+            transform: translate(-50%, -5px);
+          }
+
+          &:last-child {
+            transform: translate(-50%, 5px);
+          }
+        }
+
+        &.active {
+          span {
+            &:first-child {
+              transform: translateX(-50%) rotate(45deg);
+            }
+
+            &:last-child {
+              transform: translateX(-50%) rotate(-45deg);
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@include media("<=tablet") {
+  .header {
+    width: calc(100% - 50px);
+    top: 25px;
+    left: 25px;
+
+    &__nav {
+      padding: 0;
+      height: 42px;
+    }
+
+    &__link {
+      height: 70px;
+    }
+
+    &__btn {
+      padding: 0 25px;
+
+      &_mobile {
+        width: 24px;
+        span {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .header {
+    &__link {
+      height: 50px;
+      transform: translate(-50%, -55%);
+    }
+  }
 }

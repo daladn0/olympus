@@ -42,6 +42,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 140px;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__label {
@@ -53,11 +57,12 @@
   &__btn {
     min-width: 230px;
     margin-left: 50px;
+    z-index: 2;
   }
 
   &__horse {
     position: absolute;
-    right: 1%;
+    right: 0%;
     top: 0;
     transform: translateY(-23%);
     z-index: 2;
@@ -73,6 +78,10 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-items: center;
+
+    &_mobile {
+      display: none;
+    }
   }
 
   &__item {
@@ -108,5 +117,119 @@
     top: 50%;
     -webkit-transform: scaleX(-1) translateY(-80%);
     transform: scaleX(-1) translateY(-80%);
+  }
+}
+
+@include media("<=w-desktop") {
+  .enlist {
+    &__inner {
+      flex-direction: column;
+      padding: 60px 0;
+    }
+
+    &__info {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__images {
+      text-align: center;
+    }
+
+    &__horse {
+      position: static;
+      transform: none;
+      height: 500px;
+      z-index: 4;
+      position: relative;
+    }
+
+    &__apply {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &__btn {
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    &__thunder {
+      transform: scaleX(-1) translateY(-38%);
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .enlist {
+    &__info-text {
+      padding: 0 53px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__cloud {
+      transform: translate(0, -130%);
+      height: 180px;
+    }
+
+    &__horse {
+      width: 500px;
+      max-width: 100%;
+      height: unset;
+    }
+
+    &__ticks {
+      &_desktop {
+        display: none;
+      }
+
+      &_mobile {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+      }
+    }
+
+    &__item {
+      font-size: 16px;
+      line-height: 1;
+      white-space: unset;
+
+      &:nth-child(2n + 1) {
+        justify-self: end;
+      }
+
+      &:nth-child(2n) {
+        justify-self: start;
+      }
+
+      &-tick {
+        width: 18px;
+        height: 18px;
+      }
+
+      &-arrow {
+        width: 84px;
+        transform: translateY(50%);
+      }
+
+      span {
+        white-space: unset;
+      }
+    }
   }
 }

@@ -3,8 +3,11 @@
 @import './app';
 
 // utilities
-
+@import './include-media';
 @import './utils';
+
+// components
+@import './components/button';
 
 // modules
 @import './modules/header';
@@ -15,6 +18,3 @@
 @import './modules/media';
 @import './modules/questions';
 @import './modules/socials';
-
-// components
-@import './components/button'

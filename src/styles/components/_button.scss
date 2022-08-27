@@ -16,6 +16,10 @@
     &:hover {
       --main-primary: #ff9900;
     }
+
+    @include media('<=tablet') {
+      padding: 11px 41px;
+    }
   }
 
   &_outline {
@@ -33,6 +37,12 @@
     &:hover {
       background: white;
       color: var(--secondary-color);
+    }
+
+    @include media('<=tablet') {
+      padding: 11px 41px;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 }

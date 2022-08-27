@@ -48,5 +48,55 @@
         position: absolute;
         top: 0;
         right: 0%;
+        pointer-events: none;
+    }
+}
+
+@include media('<=m-desktop') {
+    .hero {
+        &__info {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 40px;
+            line-height: 36px;
+        }
+
+        &__hashtag {
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        &__img {
+            width: 380px;
+            top: unset;
+            left: 50%;
+            right: unset;
+            bottom: 0;
+            transform: translate(-40%, 24%);
+        }
+
+        &__btn {
+            z-index: 3;
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+        }
+
+        &__inner {
+            padding-top: 140px;
+        }
+    }
+}
+
+@include media('<=phone-hor') {
+    .hero {
+        &__img {
+            width: 350px;
+            transform: translate(-47%, 24%);
+        }
     }
 }
