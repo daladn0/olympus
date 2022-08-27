@@ -1,3 +1,15 @@
+@property --main-primary {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #ffd600;
+}
+
+@property --main-secondary {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #ff6b00;
+}
+
 .btn {
   text-transform: uppercase;
   cursor: pointer;
@@ -5,17 +17,18 @@
   &_main {
     padding: 16px 41px;
     border-radius: 50px;
-    font-family: "Panton Heavy";
     font-weight: 900;
     font-size: 14px;
     line-height: 1.3;
     color: white;
-    background: linear-gradient(180deg, var(--main-primary) 0%, var(--main-secondary) 100%);
-    transition: --main-primary .2s linear, --main-secondary .2s linear;
+    background: linear-gradient(180deg, #ffd600 0%, #ff9900 100%);
+    // background: linear-gradient(180deg, var(--main-primary) 0%, var(--main-secondary) 100%);
+    // transition: --main-primary .2s linear, --main-secondary .2s linear;
     text-shadow: 0px 2px 4px rgba(140, 112, 78, 0.6);
     &:hover {
-      --main-primary: #ff9900;
-    }
+      // --main-primary: #ff9900;
+    background: linear-gradient(180deg, #ff9900 0%, #ff9900 100%);
+  }
 
     @include media('<=tablet') {
       padding: 11px 41px;
@@ -45,16 +58,4 @@
       line-height: 18px;
     }
   }
-}
-
-@property --main-primary {
-  syntax: '<color>';
-  initial-value: #ffd600;
-  inherits: false;
-}
-
-@property --main-secondary {
-  syntax: '<color>';
-  initial-value: #ff6b00;
-  inherits: false;
 }

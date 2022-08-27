@@ -47,6 +47,10 @@
     &_6 {
         -webkit-line-clamp: 6;
     }
+
+    &_7 {
+        -webkit-line-clamp: 7;
+    }
 }
 
 .split {
@@ -95,7 +99,8 @@
     background: url('../images/divider.png');
     background-position: center;
 
-    &__stone {
+    &__btn {
+        cursor: pointer;
         position: absolute;
         left: 50%;
         top: 50%;

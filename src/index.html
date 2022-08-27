@@ -7,6 +7,32 @@
     <title>Title</title>
   </head>
   <body>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__inner">
+        <a href="/" class="sidebar__logo">
+          <img src="./images/logo.png" alt="Olympus Games Logo">
+        </a>
+  
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link truncate">Gameplay</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link truncate">Tokenomics</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link truncate">Team</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link truncate">Roadmap</a>
+          </li>
+        </ul>
+  
+        <button class="btn btn_main sidebar__btn truncate">register now</button>
+      
+      </div>  
+    </aside>
+
     <header class="header">
       <img
         class="header__corner header__corner_left"
@@ -28,7 +54,7 @@
         <button class="btn btn_main header__btn header__btn_desktop">
           Register now
         </button>
-        <button class="btn btn_main header__btn header__btn_mobile">
+        <button id="burger" class="btn btn_main header__btn header__btn_mobile">
           <span></span>
           <span></span>
         </button>
@@ -43,12 +69,12 @@
     <section class="hero">
       <div class="hero__inner container">
         <div class="hero__info">
-          <h1 class="hero__text hero__heading">
+          <h1 class="hero__text hero__heading line-clamp line-clamp_3">
             Become<br />
             OUR Game <br />
             Ambassador
           </h1>
-          <h3 class="hero__text hero__hashtag">#olympusgame</h3>
+          <h3 class="hero__text hero__hashtag truncate">#olympusgame</h3>
           <button class="btn btn_main hero__btn">apply now</button>
         </div>
         <img
@@ -61,14 +87,16 @@
     </section>
 
     <div class="divider">
-      <img
-        class="divider__stone"
-        src="./images/divider-stone.png"
-        role="presentation"
-      />
+      <a href="#benefits" class="divider__btn">
+        <img
+          class="divider__stone"
+          src="./images/divider-stone.png"
+          role="presentation"
+        />
+      </a>
     </div>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
       <div class="benefits__top">
         <div class="benefits__inner container">
           <div class="benefits__text">
@@ -245,13 +273,13 @@
       <div class="enlist__inner container">
         <div class="enlist__info">
           <div class="enlist__info-text">
-            <h2 class="enlist__title">I Want to be an Ambassador! How?</h2>
-            <p class="enlist__text enlist__text_white">
+            <h2 class="enlist__title line-clamp line-clamp_2">I Want to be an Ambassador! How?</h2>
+            <p class="enlist__text enlist__text_white line-clamp line-clamp_7">
               We invite crypto enthusiasts, bloggers, influencers, gamers,
               creators and just passionate people from all over the world to
               become our Olympus Stars.
             </p>
-            <p class="enlist__text enlist__text_orange">
+            <p class="enlist__text enlist__text_orange line-clamp line-clamp_4">
               If you have 1000+ followers in your social networks, then be sure
               to join us by following these steps:
             </p>
@@ -369,19 +397,19 @@
         </div>
 
         <div class="enlist__apply enlist__apply-mobile">
-          <h3 class="enlist__label">Ready? Let's Do It!</h3>
-          <button class="btn btn_main enlist__btn">apply now</button>
+          <h3 class="enlist__label line-clamp line-clamp_2">Ready? Let's Do It!</h3>
+          <button class="btn btn_main enlist__btn truncate">apply now</button>
         </div>
       </div>
     </section>
     <div class="divider"></div>
     <div class="media">
       <div class="media__inner container">
-        <div class="media__text">
+        <div class="media__text line-clamp line-clamp_3">
           <p>Need some UI elements? Use our Media Kit!</p>
           <p>Be Creative!</p>
         </div>
-        <button class="btn btn_outline media__btn">media kit</button>
+        <button class="btn btn_outline media__btn truncate">media kit</button>
       </div>
     </div>
     <div class="divider"></div>
@@ -396,7 +424,7 @@
                 <img src="./images/arrow-down.png" role="presentation" />
               </button>
             </div>
-            <div class="questions__item-body">
+            <div class="questions__item-body line-clamp line-clamp_7">
               Only you are responsible for the content being released. It’s not
               a job, it’s your pleasure. You can publish posts whenever you
               want. But remember, your reward is based on results.
@@ -410,7 +438,7 @@
                 <img src="./images/arrow-down.png" role="presentation" />
               </button>
             </div>
-            <div class="questions__item-body">
+            <div class="questions__item-body line-clamp line-clamp_7">
               We will evaluate the result by specific KPI, for example, the
               number of joined new unique users in the community or unique
               connected wallets to the game. You can also use the referral link.
@@ -425,7 +453,7 @@
                 <img src="./images/arrow-down.png" role="presentation" />
               </button>
             </div>
-            <div class="questions__item-body">
+            <div class="questions__item-body line-clamp line-clamp_7">
               In #Olympus_Stars size matters. We invite people from all over the
               world with more than 1000 subscribers in any social network. From
               LinkedIn to Twitch.
@@ -439,7 +467,7 @@
                 <img src="./images/arrow-down.png" role="presentation" />
               </button>
             </div>
-            <div class="questions__item-body">
+            <div class="questions__item-body line-clamp line-clamp_7">
               Joining #Olympus_Stars does not guarantee any potential perks. We
               will provide our Stars with the best perks and support possible,
               but this will be decided by Olympus on an on-going basis and may

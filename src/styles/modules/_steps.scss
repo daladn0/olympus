@@ -51,6 +51,7 @@
         font-size: 24px;
         line-height: 1;
         color: #FFFFFF;
+        width: 500px;
 
         span {
             // margin-bottom: 74px;
@@ -113,6 +114,8 @@
 
         &__items {
             font-size: 16px;
+            width: 300px;
+            margin: 0 auto;
         }
         
         &__arrow {
